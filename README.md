@@ -1,21 +1,27 @@
-# RockPaperScissor
+# Rock Paper Scissor
 
-**TODO: Add description**
+A simple rock-paper-scissors game built with Elixir for learning purposes.
 
-## Installation
+## Requirements
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `rock_paper_scissor` to your list of dependencies in `mix.exs`:
+- Elixir 1.14+
 
-```elixir
-def deps do
-  [
-    {:rock_paper_scissor, "~> 0.1.0"}
-  ]
-end
+## How to use
+
+```bash
+# Install dependencies
+mix deps.get
+
+# Run the game
+iex -S mix
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/rock_paper_scissor>.
+```elixir
+RockPaperScissor.play()
+```
 
+## Tests
+
+```bash
+mix test
+```
