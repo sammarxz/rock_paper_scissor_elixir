@@ -6,7 +6,7 @@ defmodule RockPaperScissor.Hand do
   defstruct @required_keys
 
   def build(:rock) do
-    %RockPaperScissor.Hand{
+    %__MODULE__{
       name: :rock,
       win: [:scissor],
       lose: [:paper]
@@ -14,7 +14,7 @@ defmodule RockPaperScissor.Hand do
   end
 
   def build(:paper) do
-    %RockPaperScissor.Hand{
+    %__MODULE__{
       name: :paper,
       win: [:rock],
       lose: [:scissor]
@@ -22,7 +22,7 @@ defmodule RockPaperScissor.Hand do
   end
 
   def build(:scissor) do
-    %RockPaperScissor.Hand{
+    %__MODULE__{
       name: :scissor,
       win: [:paper],
       lose: [:rock]
