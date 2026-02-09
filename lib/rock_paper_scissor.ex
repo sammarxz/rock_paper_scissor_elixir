@@ -39,16 +39,15 @@ defmodule RockPaperScissor do
     verify_result(player_hand, computer_hand)
   end
 
+  defp verify_result(%{name: same}, %{name: same}) do
+    IO.puts("Draw! Both chose #{same}")
+  end
+
   defp verify_result(player, computer) do
-    cond do
-      player.name == computer.name ->
-        IO.puts("Draw! Both chose #{player.name}")
-
-      player.name in computer.lose ->
-        IO.puts("You win! #{player.name} beats #{computer.name}")
-
-      player.name in computer.win ->
-        IO.puts("You lose! #{computer.name} beats #{player.name}")
+    if player.name in computer.lose do
+      IO.puts("You win! #{player.name} beats #{computer.name}")
+    else
+      IO.puts("You lose! #{computer.name} beats #{player.name}")
     end
   end
 end
